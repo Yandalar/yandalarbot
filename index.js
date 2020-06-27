@@ -7,9 +7,14 @@ bot.on('ready', event => {
 
 bot.login(process.env.TOKEN);
 
-bot.on('message', msg => { 
-    console.log(message.content); 
+
+bot.on('message', message => { 
+    if (message.content.startsWith == '!') {
+        message.channel.send('Type Help for info');
+    } 
 });
+
+
 
 const express = require('express');
 const app = express();
